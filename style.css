@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.carousel {
+    width: 80%;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel__container {
+    display: flex;
+    width: calc(100% * 8); /* Adjust this based on the number of slides */
+    animation: scroll 16s linear infinite; /* Duration should match the number of slides */
+}
+
+.carousel__slide {
+    min-width: 12.5%; /* 100% / number of slides in the container */
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+    border-right: 2px solid #ddd;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
